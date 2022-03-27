@@ -60,8 +60,6 @@ public abstract class ArtWork {
     public abstract double printEncumbrance();
 
 
-    //verifica se due opere d'arte sono uguali
-
     /**
      * Metodo boolean, il quale inizialmente confronta la classe del parametro (oggetto "o" di tipo Object) con la classe dell'oggetto che lo invoca (ovviamente di tipo ArtWork);
      * se le due classi non sono equivalenti, il metodo returna false;

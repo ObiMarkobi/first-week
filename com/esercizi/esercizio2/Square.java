@@ -66,13 +66,13 @@ public class Square extends ArtWork{
         this.length = length;
     }
 
-    public double encumbrance(){
-        return length*height;
-    }
-
+    /**
+     * Calcolo ingombro del quadro
+     * @return - ingombro
+     */
     @Override
     public double printEncumbrance() {
-        return encumbrance();
+        return length*height;
     }
 
 }

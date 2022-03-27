@@ -117,4 +117,17 @@ public class Collections {
             System.out.println("\nThe Art Work's encumbrance is: " + a.printEncumbrance());
 
     }
+
+    /**
+     * Metodo di stampa solo opere d'arte di un determinato artista, messo come parametro.
+     * @param - nome artista
+     */
+    public void artistCollection(String artist){
+        System.out.println("\nCollezione dell'artista " + artist + ": ");
+        for(ArtWork art: artWorks){
+            if(art.getArtist().equals(artist)){
+                System.out.println(art.getTitle());
+            }
+        }
+    }
 }
