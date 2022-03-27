@@ -6,9 +6,9 @@ public class Tester {
 
 
         ArtWork square = new Square("Gioconda", "Leonardo Da Vinci", 0.77, 0.53);
-        ArtWork square2 = new Square("Nascita di Venere","Sandro Botticelli", 1.72, 2.78);
+        ArtWork square2 = new Square("Nascita di Venere", "Sandro Botticelli", 1.72, 2.78);
         ArtWork sculpture = new Sculpture("Il Pensatore", "Auguste Rodin", 1.89, 0.98, 1.4);
-        ArtWork square3 = new Square("La notte stellata","Van Gogh", 1, 1);
+        ArtWork square3 = new Square("La notte stellata", "Van Gogh", 1, 1);
         ArtWork square4 = new Square("L'ultima cena", "Leonardo Da Vinci", 4.6, 8.8);
 
         Collections c = new Collections("Louvre", "Paris");
@@ -29,7 +29,7 @@ public class Tester {
         /**
          * Stampa dell'ingombro di un'opera appartenente alla collezione. Due metodi.
          */
-        System.out.println("\nStampa ingombro dell'opera " + square.getTitle() + " di " + square.getArtist() + ": "+ square.printEncumbrance());
+        System.out.println("\nStampa ingombro dell'opera " + square.getTitle() + " di " + square.getArtist() + ": " + square.printEncumbrance());
         c.printEncumbrance(square2); // l'opera "square2", non essendo stata aggiunta alla lista della collezione, non farà parte della collection.
         c.printEncumbrance(sculpture);// l'opera "square1" fa parte della collezione, per cui in return avremo il valore dell'ingombro;
 

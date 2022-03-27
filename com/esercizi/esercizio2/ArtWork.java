@@ -12,8 +12,7 @@ public abstract class ArtWork {
     }
 
     /**
-     *
-     * @param title - titolo dell'opera d'arte
+     * @param title  - titolo dell'opera d'arte
      * @param artist - nome dell'artista
      */
     public ArtWork(String title, String artist) {
@@ -22,7 +21,6 @@ public abstract class ArtWork {
     }
 
     /**
-     *
      * @return - titolo dell'artista
      */
     public String getTitle() {
@@ -30,7 +28,6 @@ public abstract class ArtWork {
     }
 
     /**
-     *
      * @param title - titolo dell'artista
      */
     public void setTitle(String title) {
@@ -38,7 +35,6 @@ public abstract class ArtWork {
     }
 
     /**
-     *
      * @return - nome dell'artista
      */
     public String getArtist() {
@@ -46,7 +42,6 @@ public abstract class ArtWork {
     }
 
     /**
-     *
      * @param artist - nome dell'artista
      */
     public void setArtist(String artist) {
@@ -54,7 +49,8 @@ public abstract class ArtWork {
     }
 
     /**
-     *  Metodo astratto della superclasse
+     * Metodo astratto della superclasse
+     *
      * @return - l'ingombro dell'opera
      */
     public abstract double printEncumbrance();
@@ -65,17 +61,18 @@ public abstract class ArtWork {
      * se le due classi non sono equivalenti, il metodo returna false;
      * nel momento in cui le due classi sono equivalenti, confronterà il titolo e l'artista dell'oggetto parametrato con il titolo e l'artista dell'oggetto che invoca il metodo;
      * per permettere questo confronto, si è scelto di utilizzare il casting dell'elemento Object in ArtWork, in modo da permettere il confronto delle caratteristiche.
+     *
      * @param o - oggetto di tipo Object
      * @return - true or false
      */
-    public boolean equals(Object o){
+    public boolean equals(Object o) {
 
-        if(o.getClass() == this.getClass()){
-           if((((ArtWork) o).getTitle() == this.title) && (((ArtWork) o).getArtist() == this.artist)){
-               return true;
-           }
-       }
-           return false;
+        if (o.getClass() == this.getClass()) {
+            if ((((ArtWork) o).getTitle() == this.title) && (((ArtWork) o).getArtist() == this.artist)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }

@@ -8,7 +8,6 @@ public class Test {
         A alfa = gamma;
 
 
-
         /**
          * La riga errata era la seguente:
          *
@@ -20,18 +19,17 @@ public class Test {
          *    si andrà a prendere il metodo contenuto nella classe B, returnando così B1.
          *
          */
-        System.out.println(beta.f((B) gamma,(Object[]) arr));
+        System.out.println(beta.f((B) gamma, (Object[]) arr));
 
         /**
          * 2) Utilizzando il casting di (Object) su arr come secondo parametro del metodo "beta.f", si andrà a selezionare
          *    il secondo metodo di A, i cui parametri sono di tipo Object (includono qualsiasi tipo di dato).
          */
-        System.out.println(beta.f(gamma,(Object) arr));
+        System.out.println(beta.f(gamma, (Object) arr));
 
 
-
-        System.out.println(gamma.f(arr,alfa));
-        System.out.println(gamma.f(beta,alfa));
+        System.out.println(gamma.f(arr, alfa));
+        System.out.println(gamma.f(beta, alfa));
         System.out.println(5 | 7);
 
     }

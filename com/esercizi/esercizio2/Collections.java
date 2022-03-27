@@ -15,8 +15,7 @@ public class Collections {
     }
 
     /**
-     *
-     * @param name - nome della collezione, di tipo String
+     * @param name     - nome della collezione, di tipo String
      * @param location - luogo della collezione, di tipo String
      */
     public Collections(String name, String location) {
@@ -25,8 +24,7 @@ public class Collections {
     }
 
     /**
-     *
-     * @param name - nome della collezione, di tipo String
+     * @param name     - nome della collezione, di tipo String
      * @param location - luogo della collezione, di tipo String
      * @param artWorks - lista di opere d'arte, di tipo ArtWork
      */
@@ -37,7 +35,6 @@ public class Collections {
     }
 
     /**
-     *
      * @return - nome della collezione
      */
     public String getName() {
@@ -45,7 +42,6 @@ public class Collections {
     }
 
     /**
-     *
      * @param name - nome della collezione
      */
     public void setName(String name) {
@@ -53,7 +49,6 @@ public class Collections {
     }
 
     /**
-     *
      * @return - luogo della collezione
      */
     public String getLocation() {
@@ -61,7 +56,6 @@ public class Collections {
     }
 
     /**
-     *
      * @param location - luogo della collezione
      */
     public void setLocation(String location) {
@@ -69,7 +63,6 @@ public class Collections {
     }
 
     /**
-     *
      * @return - lista delle opere d'arte
      */
     public ArrayList<ArtWork> getArtWorks() {
@@ -77,7 +70,6 @@ public class Collections {
     }
 
     /**
-     *
      * @param artWorks - lista delle opere d'arte
      */
     public void setArtWorks(ArrayList<ArtWork> artWorks) {
@@ -86,9 +78,10 @@ public class Collections {
 
     /**
      * Metodo che aggiunge alla collezione un'opera d'arte, inserita come parametro.
+     *
      * @param a - oggetto della classe ArtWork,ovvero un'opera d'arte
      */
-    public void addArtWork(ArtWork a){
+    public void addArtWork(ArtWork a) {
         artWorks.add(a);
     }
 
@@ -96,22 +89,23 @@ public class Collections {
      * Stampa della collezione intera (Titolo e Artista) dell'opera d'arte a cui ci si riferisce,
      * con nome della collezione (presumibilmente un museo) e il suo luogo.
      */
-    public void printCollection(){
+    public void printCollection() {
         System.out.println("\nThe collection of the museum " + this.name +
                 ", situated in " + this.location + ", is the following: \n");
-        for(ArtWork a : artWorks){
-            System.out.println("Title: "+ a.getTitle() + ",\tArtist: " + a.getArtist());
+        for (ArtWork a : artWorks) {
+            System.out.println("Title: " + a.getTitle() + ",\tArtist: " + a.getArtist());
         }
     }
 
     /**
      * Stampa dell'ingombro di un'opera d'arte, inserita come parametro.
      * Funzionamento: se l'opera d'arte fa parte della collezione, stamperà l'ingombro; altrimenti stampa messaggio di mancanza opera.
+     *
      * @param a - un'opera d'arte, appartenente alla classe ArtWork
      */
-    public void printEncumbrance(ArtWork a){
+    public void printEncumbrance(ArtWork a) {
 
-        if(!(this.artWorks.contains(a)))
+        if (!(this.artWorks.contains(a)))
             System.out.println("\nThe Art Work, named \"" + a.getTitle() + "\", is not included in the collection.");
         else
             System.out.println("\nThe Art Work's encumbrance is: " + a.printEncumbrance());
@@ -120,12 +114,13 @@ public class Collections {
 
     /**
      * Metodo di stampa solo opere d'arte di un determinato artista, messo come parametro.
+     *
      * @param - nome artista
      */
-    public void artistCollection(String artist){
+    public void artistCollection(String artist) {
         System.out.println("\nCollezione dell'artista " + artist + ": ");
-        for(ArtWork art: artWorks){
-            if(art.getArtist().equals(artist)){
+        for (ArtWork art : artWorks) {
+            if (art.getArtist().equals(artist)) {
                 System.out.println(art.getTitle());
             }
         }

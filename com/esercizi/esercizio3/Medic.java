@@ -11,7 +11,6 @@ public class Medic {
     }
 
     /**
-     *
      * @param name - nome del medico
      */
     public Medic(String name) {
@@ -19,7 +18,6 @@ public class Medic {
     }
 
     /**
-     *
      * @return - nome del medico
      */
     public String getName() {

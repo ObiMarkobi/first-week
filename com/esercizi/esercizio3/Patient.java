@@ -12,9 +12,8 @@ public class Patient {
     }
 
     /**
-     *
      * @param healthCard - numero tessera sanitaria del paziente
-     * @param medic - medico curante del paziente
+     * @param medic      - medico curante del paziente
      */
     public Patient(int healthCard, Medic medic) {
         this.healthCard = healthCard;
@@ -22,7 +21,6 @@ public class Patient {
     }
 
     /**
-     *
      * @return - numero tessera sanitaria del paziente
      */
     public int getHealthCard() {
@@ -30,7 +28,6 @@ public class Patient {
     }
 
     /**
-     *
      * @return - medico curante del paziente
      */
     public Medic getMedic() {

@@ -1,6 +1,6 @@
 package com.esercizi.esercizio2;
 
-public class Square extends ArtWork{
+public class Square extends ArtWork {
 
     private double height;
     private double length;
@@ -12,7 +12,6 @@ public class Square extends ArtWork{
     }
 
     /**
-     *
      * @param height - altezza del quadro
      * @param length - lunghezza del quadro
      */
@@ -22,8 +21,7 @@ public class Square extends ArtWork{
     }
 
     /**
-     *
-     * @param title - titolo dell'opera d'arte, in questo caso il quadro
+     * @param title  - titolo dell'opera d'arte, in questo caso il quadro
      * @param artist - artista dell'opera d'arte, in questo caso il quadro
      * @param height - altezza del quadro
      * @param length - lunghezza del quadro
@@ -35,7 +33,6 @@ public class Square extends ArtWork{
     }
 
     /**
-     *
      * @return - altezza del quadro
      */
     public double getHeight() {
@@ -43,7 +40,6 @@ public class Square extends ArtWork{
     }
 
     /**
-     *
      * @param height - altezza del quadro
      */
     public void setHeight(double height) {
@@ -51,7 +47,6 @@ public class Square extends ArtWork{
     }
 
     /**
-     *
      * @return - lunghezza del quadro
      */
     public double getLength() {
@@ -59,7 +54,6 @@ public class Square extends ArtWork{
     }
 
     /**
-     *
      * @param length - lunghezza del quadro
      */
     public void setLength(double length) {
@@ -68,11 +62,12 @@ public class Square extends ArtWork{
 
     /**
      * Calcolo ingombro del quadro
+     *
      * @return - ingombro
      */
     @Override
     public double printEncumbrance() {
-        return length*height;
+        return length * height;
     }
 
 }

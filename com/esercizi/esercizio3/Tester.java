@@ -30,7 +30,7 @@ public class Tester {
 
         //Stampa dell'archivio
         System.out.println("Stampa archivio dell'Azienda Sanitaria: ");
-        for (Patient pa : HA.patients){
+        for (Patient pa : HA.patients) {
             System.out.println("Tessera sanitaria del paziente: " + pa.getHealthCard() + ",\tNome del medico curante: " + pa.getMedic().getName());
         }
 
