@@ -8,7 +8,7 @@ public class HealthAutority {
     ArrayList<Patient> patients = new ArrayList<>();
 
     /**
-     *
+     * Costruttore
      */
     public HealthAutority() {
         this.medics = medics;
@@ -16,7 +16,7 @@ public class HealthAutority {
     }
 
     /**
-     *
+     * Metodo di aggiunta pazienti all'archivio, con l'inclusione del medico curante. Come parametro prende soltanto l'oggetto di tipo "Patient".
      * @param p - il paziente da aggiungere all'archivio
      *
      */
@@ -33,9 +33,10 @@ public class HealthAutority {
     }
 
     /**
-     *
-     * @param name
-     * @return
+     * Metodo creato per il secondo metodo di aggiunta pazienti. Inserendo come parametro il nome di un medico, il "findMedic"
+     * farà la ricerca nell'ArrayList "medics" presente all'interno dell'archivio. Trovato il medico, il metodo restituirà un oggetto di tipo "Medic".
+     * @param name - nome del medico curante
+     * @return - medico curante, oggetto della classe "Medic"
      */
     public Medic findMedic(String name){
         for(Medic m : medics){
@@ -46,11 +47,26 @@ public class HealthAutority {
         return null;
     }
 
-    public void addPatient2(Patient p, String medicName){
-
-    }
     /**
-     *
+     * Secondo metodo di aggiunta pazienti alla lista "patients". Questa volta come parametri prende l'oggetto "p" di tipo "Patient"
+     * e una stringa indicante il nome del medico curante.
+     * @param p - paziente, di tipo Patient
+     * @param medicName - nome del medico, stringa
+     */
+    public void addPatient2(Patient p, String medicName){
+        if(!this.patients.contains(p)){
+            patients.add(p);
+            medics.add(findMedic(medicName));
+        }
+        else
+            System.out.println("The patient is already existent.");
+    }
+
+    /**
+     * Metodo che ritorna una lista (ArrayList) di tipo "Patient"; inserendo come parametro un medico, ritornerà la lista di
+     * pazienti di quest'ultimo. Ho creato un ArrayList temporaneo "p"; scannerizzando i pazienti presenti nell'ArrayList "patients" di questa classe
+     * con il metodo ".getMedic()" prelevo l'oggetto di tipo "Medic" associato al singolo paziente e lo confronto con il medico immesso
+     * nel parametro "m". Il paziente che ha come medico "m", verrà aggiunto alla lista temporanea "p".
      */
     public ArrayList<Patient> listMedic(Medic m){
 
@@ -66,7 +82,7 @@ public class HealthAutority {
     }
 
     /**
-     * Creato appositamente per stampare il risultato del metodo listMedic().
+     * Creato appositamente per stampare il risultato del metodo listMedic(). Una formalità.
      * @param m - medico di cui si vogliono stampare i pazienti
      */
     public void printPatients(Medic m){

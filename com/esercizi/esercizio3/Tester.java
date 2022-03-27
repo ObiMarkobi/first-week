@@ -23,6 +23,10 @@ public class Tester {
         HA.addPatient(patient_3);
         HA.addPatient(patient_4);
 
+        //Aggiungo paziente attraverso secondo metodo "addPatient2", con parametri Paziente e nomeMedico.
+        //Nel caso in cui il paziente si trovi già nella lista, stamperà un messaggio.
+        Patient patient_5 = new Patient(443000963, medic_2);
+        HA.addPatient2(patient_5, "Federico Zeoli");
 
         //Stampa dell'archivio
         System.out.println("Stampa archivio dell'Azienda Sanitaria: ");

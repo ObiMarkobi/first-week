@@ -1,0 +1,30 @@
+Dato il seguente programma (tutte le classi appartengono allo stesso pacchetto):
+class A {
+public String f(A x, A[] arr) { return "A1"; }
+public String f(Object x, Object y) { return "A2"; }
+}
+class B extends A {
+public String f(B x, Object[] y) { return "B1"; }
+}
+class C extends B {
+public String f(A x, A[] arr) { return "C1"; }
+public String f(B x, Object y) { return "C2"; }
+public String f(C x, B y) { return "C3"; }
+}
+public class Test {
+public static void main(String[] args) {
+A[] arr = new B[10];
+C gamma = new C();
+B beta = gamma;
+A alfa = gamma;
+System.out.println(beta. f (gamma,arr));
+System.out.println(gamma.f(arr,alfa));
+System.out.println(gamma.f(beta,alfa));
+System.out.println(5 | 7);
+}
+}
+
+• Indicare l’output del programma. Se un’istruzione provoca un errore di compilazione,
+specificarlo e poi continuare l’esercizio ignorando quell’istruzione. (16 punti)
+• Per ogni chiamata ad un metodo (escluso System.out.println) indicare la lista delle firme
+candidate. (9 punti)

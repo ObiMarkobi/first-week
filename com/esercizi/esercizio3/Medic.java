@@ -19,7 +19,7 @@ public class Medic {
     }
 
     /**
-     * Il testo richiede soltanto il metodo di accesso Getter
+     *
      * @return - nome del medico
      */
     public String getName() {

@@ -1,0 +1,25 @@
+3. Un’azienda sanitaria desidera creare un archivio elettronico per la gestione
+dei propri medici di base e delle liste dei relativi pazienti. Si sviluppi una classe
+Medico avente il nominativo (stringa) come variabili d’istanza, un metodo
+d’accesso ed un costruttore. Si sviluppi inoltre una classe Paziente avente
+come variabili d’istanza il numero (intero) di tessera sanitaria ed un riferimento
+al proprio medico curante, con i relativi metodi di accesso ed un costruttore.
+Si sviluppi la classe AziendaSanitaria, coi seguenti metodi: Il metodo
+aggPaziente inserisce un oggetto paziente nella arraylist pazienti, con un
+riferimento al proprio medico curante nella arraylist medici. Non devono mai
+essere duplicati pazienti o medici. Il metodo listaMedico restituisce una
+arraylist con tutti e soli i pazienti che hanno il medico specificato dal
+parametro esplicito come medico curante. Il metodo statMedico restituisce
+un riferimento al medico nella arraylist medici avente il maggior numero di
+pazienti. Sviluppare tutti i metodi della classe AziendaSanitaria.
+Consigli: Le maggiori difficoltà possono essere incontrate nello sviluppo della
+classe AziendaSanitaria. Si consiglia l’uso di metodi ausiliari. Essi non sono
+richiesti dal testo, ma sono utili per accorciare il codice nei metodi successivi,
+come il metodo int trovaPaziente. Inoltre, esso è private, in quando non deve
+essere accessibile dall'utilizzatore futuro di questa classe. Altra difficoltà può
+essere riscontrata nel metodo void aggiungiPaziente: tra i suoi parametri
+impliciti, non compare un riferimento ad un oggetto della classe Medico, ma
+ad una stringa del nome del dottore. E’ necessario, quindi, ricercare il nome
+del medico nell’ArrayList e, se l’esito della ricerca è positivo, fare il
+collegamento tra il medico cercato e la posizione dell’oggetto nella lista
+medici.
